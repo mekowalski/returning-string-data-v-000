@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
 
-  def body
+  def body # replace truncated content with full body
     post = Post.find(params[:id])
     render plain: post.description #explicitly render plain text instead of rendering template
   end
